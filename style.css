@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap");
+body {
+  height: 100%;
+}
+
+.wrapper_inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+._outer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  width: 1440px;
+  height: 910px;
+  background: url("./img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__navigation__icon {
+  position: absolute;
+}
+
+.icon:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  font-family: 'Inter', sans-serif;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  color: #FFFFFF;
+}
+
+.header__list__header__element {
+  position: absolute;
+  margin: 0 6% 0 0;
+}
+
+.header__list__header__element__skills {
+  position: absolute;
+  height: 50px;
+  margin-left: 6%;
+  right: 84.2%;
+  top: 0px;
+}
+
+.header__list__header__element__portfolio {
+  position: absolute;
+  height: 50px;
+  left: 21.8%;
+  right: 62%;
+  top: 0px;
+}
+
+.header__list__header__element__video {
+  position: absolute;
+  height: 50px;
+  left: 44%;
+  right: 45%;
+  top: 0px;
+}
+
+.header__language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+  list-style: none;
+  font-weight: 400;
+}
+
+.person {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.person__person__name {
+  font-family: 'Merriweather', serif;
+}
+
+.person__person__about {
+  font-family: 'Inter', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

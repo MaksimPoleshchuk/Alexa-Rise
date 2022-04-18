@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap');
+
+@mixin Merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+@mixin Inter {
+  font-family: 'Inter', sans-serif;
+}
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+body {
+  height: 100%;
+}
+
+.wrapper_inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+._outer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  // left: 0;
+  // top: 0;
+  width: 1440px;
+  height: 910px;
+  background: url('./img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.header__navigation {
+  display: flex;
+  max-height: 90px;
+  align-items: center;
+
+  &__icon {
+    position: absolute;
+  }
+}
+
+
+
+
+// .instagram {
+//   display: flex;
+//   position: absolute;
+//   top: 10%;
+
+//   &__icon {
+//     top: 10%;
+//     bottom: 10%;
+//   }
+// }
+
+.icon:hover {
+  transition: 0.2s;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+contrast(87%);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-weight: $fw-regular;
+  font-size: 20px;
+  line-height: 50px;
+
+  @include Inter;
+}
+
+.header__list {
+  display: flex;
+  list-style: none;
+  color: #FFFFFF;
+
+  &__header__element {
+    position: absolute;
+    margin: 0 6% 0 0;
+
+    &__skills {
+      position: absolute;
+      height: 50px;
+      margin-left: 6%;
+      right: 84.2%;
+      top: 0px;
+    }
+  
+    &__portfolio {
+      position: absolute;
+      height: 50px;
+      left: 21.8%;
+      right: 62%;
+      top: 0px;
+    }
+  
+    &__video {
+      position: absolute;
+      height: 50px;
+      left: 44%;
+      right: 45%;
+      top: 0px;
+    }
+  }
+}
+
+.header__language {
+  display: flex;
+  color: #FFFFFF;
+  list-style: none;
+  font-weight: $fw-regular;
+}
+
+.person {
+  color: #FFFFFF;
+  display: flex;
+  
+
+  &__person__name {
+    @include Merriweather;
+  }
+
+  &__person__about {
+    @include Inter;
+  }
+}
