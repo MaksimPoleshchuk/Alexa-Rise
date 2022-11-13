@@ -1,42 +1,127 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap");
+html,
 body {
-  height: 100%;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .header {
+    min-width: 768px;
+    min-height: 590px;
+  }
+  .header__menu {
+    height: 90px;
+    padding: 0 44px 0 40px;
+  }
+  .header__element {
+    display: none;
+  }
+  .header__list {
+    position: relative;
+    left: 30%;
+    margin-right: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    width: 50px;
+    height: 28px;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    content: ' ';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 13px;
+  }
+  .person__name h1 {
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+  }
+  .person__about {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .person__content {
+    display: none;
+  }
+}
+
+body {
+  margin: 0;
 }
 
 .wrapper_inner {
   max-width: 1440px;
   margin: 0 auto;
+  background: #000000;
+  overflow: hidden;
 }
 
 ._outer {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 .header {
-  position: absolute;
-  width: 1440px;
-  height: 910px;
-  background: url("./img/bg.jpg");
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 910px;
+  width: 100%;
+  background-image: url("./img/bg.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center 0;
 }
 
-.header__navigation {
+.instagram {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 90px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__navigation__icon {
-  position: absolute;
+  margin: 20px 0;
+  width: 50px;
+  height: 40px;
 }
 
 .icon:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+a:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
@@ -50,8 +135,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  font-weight: 400;
+  height: 90px;
   font-size: 20px;
   line-height: 50px;
   font-family: 'Inter', sans-serif;
@@ -61,60 +145,775 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
+  margin-left: auto;
+}
+
+.header__element:not(:last-child) {
+  padding: 0 30px 0 0;
+}
+
+a {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
-.header__list__header__element {
-  position: absolute;
-  margin: 0 6% 0 0;
+.header__link {
+  color: #FFFFFF;
+  list-style: none;
+  font-weight: 700;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
-.header__list__header__element__skills {
-  position: absolute;
-  height: 50px;
-  margin-left: 6%;
-  right: 84.2%;
-  top: 0px;
+.russia {
+  margin: 0 9px 0 31px;
 }
 
-.header__list__header__element__portfolio {
-  position: absolute;
-  height: 50px;
-  left: 21.8%;
-  right: 62%;
-  top: 0px;
+.english {
+  margin-left: 8px;
 }
 
-.header__list__header__element__video {
-  position: absolute;
-  height: 50px;
-  left: 44%;
-  right: 45%;
-  top: 0px;
-}
-
-.header__language {
+.person__content {
+  color: #FFFFFF;
+  max-height: 20.625em;
+  max-width: 31.25em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #FFFFFF;
-  list-style: none;
-  font-weight: 400;
+  position: relative;
+  top: 15%;
+  left: 7%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.person {
-  color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.person__person__name {
+.person__name {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120px;
   font-family: 'Merriweather', serif;
 }
 
-.person__person__about {
+.person__about {
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 10px 0px 25px 0px;
   font-family: 'Inter', sans-serif;
+}
+
+.person__button {
+  background-color: #BDAE82;
+  max-width: 220px;
+  max-height: 55px;
+  line-height: 40px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.person__button:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5%;
+}
+
+.skills__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.title__line {
+  max-height: 80px;
+  text-align: center;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 100px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: #BDAE82;
+  padding-bottom: 60px;
+}
+
+.title__line span:before,
+.title__line span:after {
+  /* Обязательно указываем пустое свойство content, 
+  ** иначе псевдоэлементы не появятся на сайте */
+  content: "";
+  /* Указываем что наши линии будут строчно-блочные и 
+  ** выравнивание по высоте - по центру */
+  display: inline-block;
+  vertical-align: middle;
+  /* Задаем ширину 100% и выбираем высоту линии, 
+  ** в нашем примере она равна 4 пикселям */
+  width: 100%;
+  height: 4px;
+  /* Добавляем цвет для линии */
+  background-color: #BDAE82;
+  /* Добавляем пседоэлемантам возможность изменить 
+  ** позицию линии, для создания отступов от текста */
+  position: relative;
+}
+
+.title:before {
+  /* Смещаем левую линию на 100% влево, чтобы линия 
+  ** встала рядом с текстом слева */
+  margin-left: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  left: -14px;
+}
+
+.title:after {
+  /* Смещаем правую линию на 100% вправо, чтобы 
+  ** линия встала рядом с текстом справа */
+  margin-right: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  right: -14px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.skills__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+}
+
+.skills__common {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  text-align: center;
+}
+
+.bold__photo {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.quote__common {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  font-family: 'Inter', sans-serif;
+}
+
+.photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px 0 20px;
+  max-width: 320px;
+  max-height: 240px;
+  text-align: center;
+}
+
+.video {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 320px;
+  max-height: 240px;
+  padding: 0 20px 0 20px;
+  text-align: center;
+}
+
+.audio {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 320px;
+  max-height: 240px;
+  padding: 0 20px 0 20px;
+  text-align: center;
+}
+
+.retouch {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  max-width: 320px;
+  max-height: 240px;
+  padding: 0 20px 0 20px;
+}
+
+.portfolio__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio__line {
+  max-height: 80px;
+  text-align: center;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 100px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: #BDAE82;
+  padding-bottom: 60px;
+}
+
+.portfolio__line span:before,
+.portfolio__line span:after {
+  /* Обязательно указываем пустое свойство content, 
+  ** иначе псевдоэлементы не появятся на сайте */
+  content: "";
+  /* Указываем что наши линии будут строчно-блочные и 
+  ** выравнивание по высоте - по центру */
+  display: inline-block;
+  vertical-align: middle;
+  /* Задаем ширину 100% и выбираем высоту линии, 
+  ** в нашем примере она равна 4 пикселям */
+  width: 100%;
+  height: 4px;
+  /* Добавляем цвет для линии */
+  background-color: #BDAE82;
+  /* Добавляем пседоэлемантам возможность изменить 
+  ** позицию линии, для создания отступов от текста */
+  position: relative;
+}
+
+.portfolio:before {
+  /* Смещаем левую линию на 100% влево, чтобы линия 
+  ** встала рядом с текстом слева */
+  margin-left: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  left: -14px;
+}
+
+.portfolio:after {
+  /* Смещаем правую линию на 100% вправо, чтобы 
+  ** линия встала рядом с текстом справа */
+  margin-right: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  right: -14px;
+}
+
+.portfolio__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.portfolio__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 220px;
+  height: 55px;
+  padding: 0px;
+  font-family: 'Inter', sans-serif;
+  color: #BDAE82;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #BDAE82;
+  background: #000000;
+}
+
+.portfolio__btn:not(:last-child) {
+  margin-right: 5px;
+}
+
+.autumn {
+  background: #BDAE82;
+  color: #FFFFFF;
+}
+
+.portfolio__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1400px;
+  max-height: 1145px;
+}
+
+.block__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.video__title {
+  height: 80px;
+  text-align: center;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 100px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: #BDAE82;
+  padding-bottom: 60px;
+}
+
+.video__title span:before,
+.video__title span:after {
+  /* Обязательно указываем пустое свойство content, 
+  ** иначе псевдоэлементы не появятся на сайте */
+  content: "";
+  /* Указываем что наши линии будут строчно-блочные и 
+  ** выравнивание по высоте - по центру */
+  display: inline-block;
+  vertical-align: middle;
+  /* Задаем ширину 100% и выбираем высоту линии, 
+  ** в нашем примере она равна 4 пикселям */
+  width: 100%;
+  height: 4px;
+  /* Добавляем цвет для линии */
+  background-color: #BDAE82;
+  /* Добавляем пседоэлемантам возможность изменить 
+  ** позицию линии, для создания отступов от текста */
+  position: relative;
+}
+
+.video__hat:before {
+  /* Смещаем левую линию на 100% влево, чтобы линия 
+  ** встала рядом с текстом слева */
+  margin-left: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  left: -14px;
+}
+
+.video__hat:after {
+  /* Смещаем правую линию на 100% вправо, чтобы 
+  ** линия встала рядом с текстом справа */
+  margin-right: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  right: -14px;
+}
+
+.video__image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.video__play_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 45.56%;
+  right: 45.43%;
+}
+
+.price__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.price__title {
+  height: 80px;
+  text-align: center;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 100px;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+  color: #BDAE82;
+  padding-bottom: 60px;
+}
+
+.price__title span:before,
+.price__title span:after {
+  /* Обязательно указываем пустое свойство content, 
+  ** иначе псевдоэлементы не появятся на сайте */
+  content: "";
+  /* Указываем что наши линии будут строчно-блочные и 
+  ** выравнивание по высоте - по центру */
+  display: inline-block;
+  vertical-align: middle;
+  /* Задаем ширину 100% и выбираем высоту линии, 
+  ** в нашем примере она равна 4 пикселям */
+  width: 100%;
+  height: 4px;
+  /* Добавляем цвет для линии */
+  background-color: #BDAE82;
+  /* Добавляем пседоэлемантам возможность изменить 
+  ** позицию линии, для создания отступов от текста */
+  position: relative;
+}
+
+.price__hat:before {
+  /* Смещаем левую линию на 100% влево, чтобы линия 
+  ** встала рядом с текстом слева */
+  margin-left: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  left: -14px;
+}
+
+.price__hat:after {
+  /* Смещаем правую линию на 100% вправо, чтобы 
+  ** линия встала рядом с текстом справа */
+  margin-right: -100%;
+  /* Указываем в пикселях отступ линии от текста заголовка */
+  right: -14px;
+}
+
+.price__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid #BDAE82;
+  width: 450px;
+  height: 505px;
+}
+
+.price__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  width: 450px;
+  height: 505px;
+}
+
+.price__choice {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  line-height: 56px;
+  font-size: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 43px;
+  margin-bottom: 20px;
+}
+
+.price__cost {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  color: #BDAE82;
+}
+
+.price__quote {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+}
+
+.price__btn {
+  background: #BDAE82;
+  width: 220px;
+  height: 55px;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 43px;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.price__dollar {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background: url("./img/alexa-photo.jpg");
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #BDAE82;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 450px;
+  height: 445px;
+  margin-right: 20px;
+}
+
+.container__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__contact {
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0em;
+  color: #BDAE82;
+}
+
+.container__form {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  width: 440px;
+  letter-spacing: 0em;
+}
+
+.container__input {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  color: #BDAE82;
+  border: 2px solid #BDAE82;
+  width: 100%;
+  height: 50px;
+  background: none;
+}
+
+.container__input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.container__input:last-child {
+  margin-bottom: 30px;
+  height: 100px;
+}
+
+.container__input::-webkit-input-placeholder {
+  color: #BDAE82;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  padding-left: 20px;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.container__input:-ms-input-placeholder {
+  color: #BDAE82;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  padding-left: 20px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.container__input::-ms-input-placeholder {
+  color: #BDAE82;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  padding-left: 20px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.container__input::placeholder {
+  color: #BDAE82;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  padding-left: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__btn {
+  background: #BDAE82;
+  height: 55px;
+  width: 220px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

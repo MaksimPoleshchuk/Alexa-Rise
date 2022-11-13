@@ -13,70 +13,196 @@
 <body>
   <div class="wrapper_inner">
     <header class="header">
-      <div class="header__navigation _outer">
-        <a href="https://www.instagram.com/">
+      <div class="header__menu _outer">
+        <a href="https://www.instagram.com/" class="instagram">
           <img class="icon" src="./img/Vector.svg" alt="instagram">
         </a>
-        <div class="header__menu">
-          <ul class="header__list">
-            <li class="header__element skills">
-              Skills
-            </li>
-            <li class="header__element portfolio">
-              Portfolio
-            </li>
-            <li class="header__element video">
-              Video
-            </li>
-            <li class="header__element price">
-              Price
-            </li>
-            <li class="header__element contacts">
-              Contacts
-            </li>
-          </ul>
-
-          <ul class="header__language">
-            <li class="header__language ru">ru</li>
-            <li class="header__language slash">/</li>
-            <li class="header__language en">en</li>
-          </ul>
+        <ul class="header__list">
+          <li class="header__element">
+            <a href="#" class="skills">Skills</a>
+          </li>
+          <li class="header__element">
+            <a href="#" class>Portfolio</a>
+          </li>
+          <li class="header__element">
+            <a href="#">Video</a>
+          </li>
+          <li class="header__element">
+            <a href="#">Price</a>
+          </li>
+          <li class="header__element">
+            <a href="#">Contacts</a>
+          </li>
+          <li class="header__link">
+            <a href="#" class="russia">ru</a>
+          </li>
+          <li class="header__link">/</li>
+          <li class="header__link">
+            <a href="#" class="english">en</a>
+          </li>
+        </ul>
+        <div class="header__burger">
+          <span></span>
         </div>
       </div>
 
-      <div class="person">
+      <div class="person__content">
         <h1 class="person__name">Alexa Rise</h1>
-        <q class="person__about">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer
+        <p class="person__about">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer
           Alexa Rise
-        </q>
+        </p>
         <button class="person__button">Hire me</button>
       </div>
     </header>
 
-
-    <!-- Person -->
-    <section>
-
-    </section>
-
     <!-- Skills -->
-    <section>
+    <section class="skills__title">
+
+      <div class="title__line">
+        <span class="title">Skills</span>
+      </div>
+      <div class="skills__item">
+        <ul class="skills__common">
+          <ul class="photo">
+            <li><img src="./img/Vector (2).svg" alt="photo"></li>
+            <li><p class="bold__photo">Digital photography</p></li>
+            <li><q class="quote__common">High-quality photos in the studio and on the nature</q></li>
+          </ul>
+          <ul class="video">
+            <li><img src="./img/Vector (3).svg" alt="video"></li>
+            <li><p class="bold__photo">Video shooting</p></li>
+            <li><q class="quote__common">Capture your moments so that they always stay with you</q></li>
+          </ul>
+          <ul class="retouch">
+            <li><img src="./img/Vector (4).svg" alt="retouch"></li>
+            <li><p class="bold__photo">Retouch</p></li>
+            <li><q class="quote__common">I strive to make photography surpass reality</q></li>
+          </ul>
+          <ul class="audio">
+            <li><img src="./img/mic 1.svg" alt="audio"></li>
+            <li><p class="bold__photo">Audio</p></li>
+            <li><q class="quote__common">Professional sounds recording for video, advertising, portfolio</q></li>
+          </ul>
+        </ul>
+      </div>
 
     </section>
 
     <!-- portfolio -->
-    <section>
-
+    <section class="portfolio__main">
+      <div class="portfolio__line">
+        <span class="portfolio">Portfolio</span>
+      </div>
+      <div class="portfolio__btns">
+        <button class="portfolio__btn winter">Winter</button>
+        <button class="portfolio__btn spring">Spring</button>
+        <button class="portfolio__btn summer">Summer</button>
+        <button class="portfolio__btn autumn">Autumn</button>
+      </div>
+      <div class="portfolio__items">
+        <ul class="block__img">
+          <li class="img__items"><img src="./img/portfolio-img.jpg" alt="love"></li>
+          <li class="img__items"><img src="./img/portfolio-img (1).jpg" alt="horse"></li>
+          <li class="img__items"><img src="./img/portfolio-img (2).jpg" alt="kid"></li>
+          <li class="img__items"><img src="./img/portfolio-img (3).jpg" alt="wood"></li>
+          <li class="img__items"><img src="./img/portfolio-img (4).jpg" alt="people"></li>
+          <li class="img__items"><img src="./img/portfolio-img (5).jpg" alt="phone"></li>
+        </ul>
+      </div>
     </section>
 
     <!-- Video -->
-    <section></section>
+    <section class="video__section">
+      <div class="video__title">
+        <span class="video__hat">Video</span>
+      </div>
+      <div class="video__image">
+        <img src="./img/video-player.jpg" alt="video-player">
+        <img class="video__play_hover" src="./img/Play_hover.png" alt="Play_hover">
+      </div>
+    </section>
 
     <!-- Price -->
-    <section></section>
+    <section class="price__section">
+      <div class="price__title">
+        <span class="price__hat">Price</span>
+      </div>
+      <div class="price__items">
+        <div class="price__items form">
+          <ul class="price__list">
+            <li>
+              <p class="price__choice">Standart</p>
+            </li>
+            <li class="price__cost">
+              <p class="price__dollar">500 $</p>
+            </li>
+            <li>
+              <p class="price__quote">
+                One location<br>
+                120 photos in color<br>
+                12 photos in retouch<br>
+                Readiness 2-3 weeks<br>
+                Make up, visage
+              </p>
+            </li>
+            <button class="price__btn">Order shooting</button>
+          </ul>
+        </div>
+        <div class="price__items form">
+          <ul class="price__list">
+            <li>
+              <p class="price__choice">Premium</p>
+            </li>
+            <li class="price__cost">
+              <p class="price__dollar">700 $</p>
+            </li>
+            <li>
+              <p class="price__quote">
+                One or two locations<br>
+                200 photos in color<br>
+                20 photos in retouch<br>
+                Readiness 1-2 weeks<br>
+                Make up, visage
+              </p>
+            </li>
+            <button class="price__btn">Order shooting</button>
+          </ul>
+        </div>
+        <div class="price__items form">
+          <ul class="price__list">
+            <li>
+              <p class="price__choice">Gold</p>
+            </li>
+            <li class="price__cost">
+              <p class="price__dollar">1000 $</p>
+            </li>
+            <li>
+              <p class="price__quote">
+                Three locations or more<br>
+                300 photos in color<br>
+                50 photos in retouch<br>
+                Readiness 1 week<br>
+                Make up, visage, hairstyle
+              </p>
+            </li>
+            <button class="price__btn">Order shooting</button>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact me -->
-    <main></main>
+    <main class="contacts__container">
+      <div class="container">
+        <p class="container__contact">Contact me</p>
+        <form class="container__form" action="signin" method="post">
+          <input class="container__input" type="text" name="email" placeholder="E-mail">
+          <input class="container__input" type="number" name="phone" placeholder="phone">
+          <input class="container__input" type="text" name="message" placeholder="message">
+        </form>
+        <button class="container__btn">Send message</button>
+      </div>
+    </main>
 
     <footer></footer>
   </div>
